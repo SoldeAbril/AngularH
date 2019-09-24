@@ -1,0 +1,25 @@
+<header>
+    <span>
+        {{marca}}
+    </span>
+    <nav *ngIf = "sesion === true">
+        <ul>
+            <li>Nosotros</li>
+            <li>Portafolio</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li *ngFor = "let x of links">
+                {{x}}
+            </li>
+            
+        </ul>
+    </nav>
+    <nav *ngIf ="sesion === false">
+        <ul>
+            <li>Iniciar Sesion</li>
+        </ul>
+    </nav>
+</header>
